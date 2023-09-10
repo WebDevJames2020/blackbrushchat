@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const port = process.env.PORT || 3000;
 
 
 const app = express();
@@ -18,7 +19,7 @@ app.post("/", function (req, res) {
     res.send("Result: " + result);
   });
 
-//app.listen(3000, function(){
-//    console.log("Server started on port 3000")
-//});
+app.listen(port, "0.0.0.0", function (){
+    console.log("Server started on port 3000")
+});
 
