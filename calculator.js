@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 3000;
-const testText = {{shared.MY_TESTVAR}};
+//const testText = MY_TESTVAR;
 
 
 const app = express();
@@ -17,7 +17,7 @@ app.post("/", function (req, res) {
     var num2 = Number(req.body.num2);
     var result = num1 + num2;
 
-    res.send("Result: " + result + testText);
+    res.send("Result: " + result + MY_TESTVAR);
   });
 
 app.listen(port, "0.0.0.0", function (){
